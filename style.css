@@ -1,0 +1,537 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4f8;
+    color: #263548;
+    line-height: 1.6;
+}
+
+a {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* TOP BAR */
+
+.topbar {
+    background: #07376c;
+    color: white;
+    padding: 10px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.topbar a:hover {
+    text-decoration: underline;
+}
+
+/* COLLEGE HEADER */
+
+.college-header {
+    background: white;
+    padding: 18px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.college-title {
+    flex: 1;
+}
+
+.college-title h1 {
+    color: #07376c;
+    font-size: clamp(17px, 2.3vw, 29px);
+    line-height: 1.4;
+}
+
+.college-title p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.college-title .motto {
+    color: #174e83;
+    font-weight: bold;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: #07376c;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 14px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: #1762a1;
+    outline-offset: -3px;
+}
+
+/* HERO IMAGE */
+
+.hero {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #174e83;
+}
+
+.hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* QUICK MENU */
+
+.quick-menu {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 2%;
+}
+
+.quick-menu a {
+    background: white;
+    color: #173d65;
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 8px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px #0000000d;
+    font-size: 13px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.quick-menu a span {
+    display: block;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.quick-menu a:hover,
+.quick-menu a:focus-visible {
+    background: #e5f1ff;
+    color: #07508d;
+    border-color: #07508d;
+}
+
+/* MAIN CONTENT GRID */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1.25fr 1.25fr;
+    gap: 15px;
+    padding: 0 2% 25px;
+    align-items: start;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 0;
+    box-shadow: 0 3px 10px #00000008;
+}
+
+.panel h3 {
+    background: #07508d;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+}
+
+/* QUICK LINKS */
+
+.quick-links a {
+    display: block;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e7ebf0;
+    text-decoration: none;
+    color: #263548;
+    font-size: 13px;
+}
+
+.quick-links a:hover,
+.quick-links a:focus-visible {
+    background: #edf5ff;
+    color: #07508d;
+}
+
+/* NEWS */
+
+.news-item {
+    display: block;
+    padding: 11px;
+    border-bottom: 1px solid #e4e9ef;
+    font-size: 13px;
+    color: #263548;
+    text-decoration: none;
+}
+
+.news-item:hover,
+.news-item:focus-visible {
+    background: #edf5ff;
+}
+
+.news-item span {
+    display: inline-block;
+    background: #1762a1;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.news > p {
+    padding: 12px;
+    font-size: 13px;
+}
+
+.welcome-title {
+    margin-top: 8px;
+}
+
+/* PRINCIPAL */
+
+.principal-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.principal-details img,
+.principal-photo {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto 12px;
+    border-radius: 6px;
+    background: #f1f4f8;
+}
+
+.principal-text {
+    text-align: left;
+}
+
+.principal-details h4 {
+    color: #07376c;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.principal-details p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* ADMIN PANEL */
+
+.admin-panel form {
+    padding: 14px;
+}
+
+.admin-panel label {
+    display: block;
+    font-size: 13px;
+    margin: 10px 0 5px;
+}
+
+.admin-panel input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd5df;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.admin-panel input:focus {
+    outline: 2px solid #8abcf0;
+    border-color: #07508d;
+}
+
+.admin-panel button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 11px;
+    background: #07508d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin-panel button:hover {
+    background: #07376c;
+}
+
+.admin-panel ul {
+    padding: 14px 14px 14px 30px;
+    font-size: 12px;
+}
+
+#loginMessage {
+    font-size: 12px;
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* GENERAL SECTIONS */
+
+.extra-section {
+    background: white;
+    margin: 15px 2%;
+    padding: 25px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #00000008;
+    scroll-margin-top: 15px;
+}
+
+.extra-section h2 {
+    color: #07376c;
+    font-size: 25px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dce8f5;
+}
+
+.extra-section h3 {
+    color: #07508d;
+    margin: 18px 0 10px;
+}
+
+.extra-section p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.extra-section ul {
+    padding-left: 25px;
+    margin: 12px 0;
+}
+
+.extra-section li {
+    margin-bottom: 8px;
+}
+
+/* COURSE CARDS */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.course-card {
+    background: #f7faff;
+    border: 1px solid #d5e3f3;
+    border-left: 4px solid #07508d;
+    border-radius: 7px;
+    padding: 18px;
+}
+
+.course-card h3 {
+    color: #07376c;
+    font-size: 17px;
+    margin: 0 0 8px;
+}
+
+.course-card p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.course-card:hover {
+    background: #eaf3ff;
+}
+
+/* ACTION LINKS */
+
+.action-link {
+    display: inline-block;
+    background: #07508d;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    margin-top: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.action-link:hover,
+.action-link:focus-visible {
+    background: #07376c;
+}
+
+/* GALLERY */
+
+.gallery-image {
+    width: 100%;
+    max-width: 750px;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #07376c;
+    color: white;
+    text-align: center;
+    padding: 22px 12px;
+    font-size: 13px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .quick-menu {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .college-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .second-logo {
+        display: none;
+    }
+
+    .college-title h1 {
+        font-size: 17px;
+    }
+
+    .college-title p {
+        font-size: 12px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 220px;
+    }
+
+    .quick-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 0 12px 18px;
+    }
+
+    .extra-section {
+        margin: 12px;
+        padding: 18px;
+    }
+
+    .extra-section h2 {
+        font-size: 21px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-details img,
+    .principal-photo {
+        max-width: 220px;
+        height: 220px;
+    }
+}

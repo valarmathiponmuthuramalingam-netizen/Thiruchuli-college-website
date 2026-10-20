@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admin Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            background: #12345a;
+            color: white;
+            padding: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 23px;
+        }
+
+        .back-button {
+            background: white;
+            color: #12345a;
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000010;
+            border-top: 4px solid #1d70b8;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #12345a;
+        }
+
+        .card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #12345a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 5px;
+        }
+
+        .notice {
+            margin-top: 25px;
+            background: #fff7df;
+            padding: 18px;
+            border-left: 4px solid #e0a000;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 19px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>College Admin Dashboard</h1>
+        <a class="back-button" href="index.html">Back to Website</a>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Welcome, Administrator</h2>
+            <p>Government Arts and Science College, Tiruchuli</p>
+        </section>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>College Details</h3>
+                <p>Review the college information displayed on the website.</p>
+                <a href="index.html#about">View Details</a>
+            </article>
+
+            <article class="card">
+                <h3>Course Details</h3>
+                <p>Review the degree courses listed on the college website.</p>
+                <a href="index.html#courses">View Courses</a>
+            </article>
+
+            <article class="card">
+                <h3>Notices & Updates</h3>
+                <p>Open the website's notices and updates section.</p>
+                <a href="index.html#notices">View Notices</a>
+            </article>
+
+            <article class="card">
+                <h3>Contact Information</h3>
+                <p>Review the contact information shown on the website.</p>
+                <a href="index.html#contact">View Contact</a>
+            </article>
+
+        </section>
+
+        <section class="notice">
+            <strong>Important:</strong>
+            This is a dashboard design preview. It does not provide
+            secure administrator authentication or edit and save
+            college information. Those features require additional setup.
+        </section>
+
+    </main>
+
+    <footer>
+        Government Arts and Science College, Tiruchuli
+    </footer>
+
+</body>
+</html>

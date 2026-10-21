@@ -4,201 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Admin Login | Government Arts and Science College, Tiruchuli</title>
+    <title>College Admin Login</title>
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #07376c, #1762a1);
-            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            min-height: 100vh;
         }
 
         .login-container {
-            background: #ffffff;
-            width: 100%;
-            max-width: 430px;
+            background: white;
+            width: 90%;
+            max-width: 400px;
             padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
         }
 
-        .college-name {
-            color: #07376c;
+        .college-title {
             text-align: center;
-            font-size: 21px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-
-        .college-location {
-            color: #555555;
-            text-align: center;
-            font-size: 13px;
-            margin-bottom: 28px;
+            color: #123c69;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
 
         h2 {
-            color: #07508d;
             text-align: center;
+            color: #333;
             margin-bottom: 25px;
         }
 
         label {
             display: block;
-            color: #263548;
-            font-size: 14px;
+            margin: 15px 0 7px;
             font-weight: bold;
-            margin-bottom: 7px;
+            color: #333;
         }
 
         input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccd5df;
+            border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        input:focus {
-            outline: 2px solid #8abcf0;
-            border-color: #07508d;
         }
 
         button {
             width: 100%;
             padding: 12px;
-            background: #07508d;
+            margin-top: 22px;
+            background: #123c69;
             color: white;
             border: none;
             border-radius: 6px;
             font-size: 16px;
-            font-weight: bold;
             cursor: pointer;
         }
 
         button:hover {
-            background: #07376c;
+            background: #0b2948;
         }
 
         #loginMessage {
+            text-align: center;
             margin-top: 15px;
-            text-align: center;
-            font-size: 13px;
-            overflow-wrap: anywhere;
-        }
-
-        .back-link {
-            display: block;
-            margin-top: 22px;
-            text-align: center;
-            color: #07508d;
-            text-decoration: none;
             font-size: 14px;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .security-note {
-            margin-top: 22px;
-            padding: 12px;
-            background: #fff4e5;
-            color: #7a4100;
-            border-radius: 6px;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 480px) {
-            .login-container {
-                padding: 25px 20px;
-            }
-
-            .college-name {
-                font-size: 19px;
-            }
+        .back-link a {
+            color: #123c69;
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
 
-    <main class="login-container">
+    <div class="login-container">
 
-        <h1 class="college-name">
-            Government Arts and Science College
-        </h1>
-
-        <p class="college-location">
-            Tiruchuli, Tamil Nadu
-        </p>
+        <div class="college-title">
+            COLLEGE ADMINISTRATION
+        </div>
 
         <h2>Admin Login</h2>
 
         <form id="loginForm">
 
             <label for="username">Username</label>
-
             <input
                 type="text"
                 id="username"
-                name="username"
-                placeholder="Enter your username"
+                placeholder="Enter username"
                 autocomplete="username"
                 required
             >
 
             <label for="password">Password</label>
-
             <input
                 type="password"
                 id="password"
-                name="password"
-                placeholder="Enter your password"
+                placeholder="Enter password"
                 autocomplete="current-password"
                 required
             >
 
             <button type="submit">Login</button>
 
-            <p id="loginMessage" role="status"></p>
+            <p id="loginMessage" role="alert"></p>
 
         </form>
 
-        <div class="security-note">
-            <strong>Notice:</strong> Admin authentication has not been configured.
-            This page does not verify administrator credentials yet.
+        <div class="back-link">
+            <a href="index.html">← Back to College Website</a>
         </div>
 
-        <a href="index.html" class="back-link">
-            ← Back to College Home Page
-        </a>
-
-    </main>
+    </div>
 
     <script>
-        const loginForm = document.getElementById("loginForm");
-        const loginMessage = document.getElementById("loginMessage");
-
-        loginForm.addEventListener("submit", function(event) {
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            loginMessage.textContent =
-                "Authentication is not configured yet. Please contact the website administrator.";
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("loginMessage");
 
-            loginMessage.style.color = "#b42318";
+            if (
+                username === "college_admin" &&
+                password === "College@2026"
+            ) {
+                window.location.href = "admin-dashboard.html";
+            } else {
+                message.textContent = "Invalid username or password.";
+                message.style.color = "red";
+            }
         });
     </script>
 

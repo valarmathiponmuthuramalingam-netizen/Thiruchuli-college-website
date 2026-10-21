@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>College Admin Dashboard</title>
 
     <style>
@@ -16,6 +17,7 @@
             font-family: Arial, sans-serif;
             background: #f1f5f9;
             color: #1e293b;
+            line-height: 1.6;
         }
 
         header {
@@ -30,7 +32,7 @@
         }
 
         header h1 {
-            font-size: 23px;
+            font-size: 24px;
         }
 
         .back-button {
@@ -40,6 +42,10 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #dbeafe;
         }
 
         .container {
@@ -54,6 +60,18 @@
 
         .welcome h2 {
             margin-bottom: 8px;
+            color: #12345a;
+        }
+
+        .dashboard-label {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #dbeafe;
+            color: #12345a;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
         }
 
         .cards {
@@ -76,8 +94,7 @@
         }
 
         .card p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .card a {
@@ -89,12 +106,47 @@
             border-radius: 5px;
         }
 
+        .card a:hover {
+            background: #1d70b8;
+        }
+
         .notice {
             margin-top: 25px;
             background: #fff7df;
             padding: 18px;
             border-left: 4px solid #e0a000;
-            line-height: 1.7;
+            border-radius: 5px;
+        }
+
+        .notice p {
+            margin-top: 6px;
+        }
+
+        .quick-actions {
+            margin-top: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .quick-actions h2 {
+            color: #12345a;
+            margin-bottom: 15px;
+        }
+
+        .quick-actions a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 14px;
+            background: #e2e8f0;
+            color: #12345a;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .quick-actions a:hover {
+            background: #cbd5e1;
         }
 
         footer {
@@ -111,64 +163,157 @@
             .container {
                 padding: 15px;
             }
+
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>College Admin Dashboard</h1>
-        <a class="back-button" href="index.html">Back to Website</a>
-    </header>
+<header>
+    <h1>College Admin Dashboard</h1>
 
-    <main class="container">
+    <a class="back-button" href="index.html">
+        ← Back to Website
+    </a>
+</header>
 
-        <section class="welcome">
-            <h2>Welcome, Administrator</h2>
-            <p>Government Arts and Science College, Tiruchuli</p>
-        </section>
+<main class="container">
 
-        <section class="cards">
+    <section class="welcome">
+        <h2>Welcome, Administrator!</h2>
 
-            <article class="card">
-                <h3>College Details</h3>
-                <p>Review the college information displayed on the website.</p>
-                <a href="index.html#about">View Details</a>
-            </article>
+        <p>Government Arts and Science College, Tiruchuli</p>
 
-            <article class="card">
-                <h3>Course Details</h3>
-                <p>Review the degree courses listed on the college website.</p>
-                <a href="index.html#courses">View Courses</a>
-            </article>
+        <span class="dashboard-label">ADMIN DASHBOARD PREVIEW</span>
+    </section>
 
-            <article class="card">
-                <h3>Notices & Updates</h3>
-                <p>Open the website's notices and updates section.</p>
-                <a href="index.html#notices">View Notices</a>
-            </article>
+    <section class="cards">
 
-            <article class="card">
-                <h3>Contact Information</h3>
-                <p>Review the contact information shown on the website.</p>
-                <a href="index.html#contact">View Contact</a>
-            </article>
+        <article class="card">
+            <h3>🏛️ College Details</h3>
 
-        </section>
+            <p>
+                View the college profile and general information
+                displayed on the website.
+            </p>
 
-        <section class="notice">
-            <strong>Important:</strong>
-            This is a dashboard design preview. It does not provide
-            secure administrator authentication or edit and save
-            college information. Those features require additional setup.
-        </section>
+            <a href="index.html#about">
+                View College Details
+            </a>
+        </article>
 
-    </main>
+        <article class="card">
+            <h3>📚 Course Details</h3>
 
-    <footer>
+            <p>
+                View the undergraduate courses listed on the
+                college website.
+            </p>
+
+            <a href="index.html#courses">
+                View Courses
+            </a>
+        </article>
+
+        <article class="card">
+            <h3>📢 Notices & Updates</h3>
+
+            <p>
+                Open the latest news and updates section
+                on the college website.
+            </p>
+
+            <a href="index.html#notices">
+                View Notices
+            </a>
+        </article>
+
+        <article class="card">
+            <h3>📞 Contact Information</h3>
+
+            <p>
+                View the college location and contact information
+                displayed on the website.
+            </p>
+
+            <a href="index.html#contact">
+                View Contact
+            </a>
+        </article>
+
+        <article class="card">
+            <h3>🎓 Admissions</h3>
+
+            <p>
+                Open the admission information section.
+            </p>
+
+            <a href="index.html#admissions">
+                View Admissions
+            </a>
+        </article>
+
+        <article class="card">
+            <h3>🖼️ College Gallery</h3>
+
+            <p>
+                View the college building and available photographs.
+            </p>
+
+            <a href="index.html#gallery">
+                View Gallery
+            </a>
+        </article>
+
+    </section>
+
+    <section class="quick-actions">
+
+        <h2>Quick Navigation</h2>
+
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About College</a>
+        <a href="index.html#admissions">Admissions</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#principal">Principal</a>
+        <a href="index.html#notices">Notices</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+
+    </section>
+
+    <section class="notice">
+
+        <strong>Important Notice</strong>
+
+        <p>
+            This dashboard currently provides navigation to the
+            college website sections. It does not edit or save
+            college information.
+        </p>
+
+        <p>
+            Secure administrator authentication and data management
+            require additional backend or authentication setup.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
         Government Arts and Science College, Tiruchuli
-    </footer>
+    </p>
+
+    <p>
+        © 2026 College Website
+    </p>
+</footer>
 
 </body>
 </html>
